@@ -20,4 +20,8 @@ function getHumanChoice(choice = prompt("What is your choice?")) {
     }
 }
 
-console.log(getHumanChoice());
+let humanScore = 0, 
+    computerScore = 0;
+
+console.log(humanScore);
+console.log(computerScore);
