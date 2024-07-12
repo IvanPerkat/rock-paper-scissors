@@ -23,5 +23,35 @@ function getHumanChoice(choice = prompt("What is your choice?")) {
 let humanScore = 0, 
     computerScore = 0;
 
-console.log(humanScore);
-console.log(computerScore);
+function playRound(humanChoice, computerChoice) {
+    switch(humanChoice.toLowerCase() === "rock") {
+        case (computerChoice.toLowerCase() === "rock") : 
+            return console.log("It's a draw!");
+        case(computerChoice.toLowerCase() === "paper") :
+            computerScore++;
+            return console.log("You lose! Paper beats rock!");
+        case(computerChoice.toLowerCase() === "scissors") : 
+            humanScore++;
+            return console.log("You win! Rock beats scissors!");
+    } switch(humanChoice.toLowerCase() === "paper") {
+        case (computerChoice.toLowerCase() === "rock") : 
+            humanScore++;
+            return console.log("You win! Paper beats rock!");
+        case(computerChoice.toLowerCase() === "paper") :
+            return console.log("It's a draw!");
+        case(computerChoice.toLowerCase() === "scissors") : 
+            computerScore++;
+            return console.log("You lose! Scissors beats paper!");
+    } switch(humanChoice.toLowerCase() === "scissors") {
+        case (computerChoice.toLowerCase() === "rock") : 
+            computerScore++;
+            return console.log("You lose! Rock beats scissors!");
+        case(computerChoice.toLowerCase() === "paper") :
+            humanScore++;
+            return console.log("You win! Scissors beats paper!");
+        case(computerChoice.toLowerCase() === "scissors") : 
+            return console.log("It's a draw!");
+    }
+}
+
+playRound(getHumanChoice(), getComputerChoice());
