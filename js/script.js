@@ -8,4 +8,16 @@ function getComputerChoice(number = (Math.floor(Math.random() * 3))) {
     }
 }
 
-console.log(getComputerChoice());
+function getHumanChoice(choice = prompt("What is your choice?")) {
+    if(choice.toLowerCase() === "rock") {
+        return "Rock";
+    } else if(choice.toLowerCase() === "paper") {
+        return "Paper";
+    } else if(choice.toLowerCase() === "scissors") {
+        return "Scissors";
+    } else {
+        alert("Invalid input!");
+    }
+}
+
+console.log(getHumanChoice());
